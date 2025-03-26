@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Restart Node.js') {
             steps {
-                sh 'sudo /usr/bin/pm2 restart all || /usr/bin/pm2 start $NODE_DIR/server.js --name node-app'
+                sh 'sudo -u xts pm2 restart all --update-env'
             }
         }
     }
