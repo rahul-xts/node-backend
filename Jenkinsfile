@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Restart Node.js') {
             steps {
-                sh 'sudo pm2 restart all || pm2 start $NODE_DIR/server.js --name node-app'
+                sh 'sudo /usr/bin/pm2 restart all || /usr/bin/pm2 start $NODE_DIR/server.js --name node-app'
             }
         }
     }
